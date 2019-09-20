@@ -11,6 +11,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {environment} from '../environments/environment';
+import {CoreModule} from './modules/core/core.module';
+import {LayoutModule} from './modules/layout/layout.module';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import {environment} from '../environments/environment';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, // needed for database features
     AngularFireAuthModule, // needed for auth features
+    CoreModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
